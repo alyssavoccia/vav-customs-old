@@ -1,0 +1,19 @@
+{
+  "name": "vav-customs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "brfs": "^2.0.2",
+    "browserify": "^17.0.0",
+    "browserify-fs": "^1.0.0",
+    "level-filesystem": "^1.2.0",
+    "read-directory": "^3.0.2",
+    "uniq": "^1.0.1"
+  }
+}
