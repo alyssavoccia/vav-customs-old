@@ -206,7 +206,7 @@ img {
 }
 
 .gallery-masonry {
-  column-count: 1;
+  column-count: 2;
   column-gap: 1em;
 }
 
@@ -308,12 +308,6 @@ img {
 /* =========================== */
 /* =======MEDIA QUERIES======= */
 /* =========================== */
-@media (min-width: 550px) {
-  .gallery-masonry {
-    column-count: 2;
-  }
-}
-
 @media (min-width: 760px) {
   /* ========================= */
   /* =======BASE STYLES======= */
