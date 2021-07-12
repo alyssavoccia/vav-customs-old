@@ -199,14 +199,14 @@ img {
 }
 
 .social-media_text {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-top: 2rem;
   text-align: center;
 }
 
 .gallery-masonry {
-  column-count: 2;
+  column-count: 1;
   column-gap: 1em;
 }
 
@@ -308,6 +308,12 @@ img {
 /* =========================== */
 /* =======MEDIA QUERIES======= */
 /* =========================== */
+@media (min-width: 550px) {
+  .gallery-masonry {
+    column-count: 2;
+  }
+}
+
 @media (min-width: 760px) {
   /* ========================= */
   /* =======BASE STYLES======= */
@@ -384,6 +390,12 @@ img {
     margin-top: 0;
   }
 
+  .gallery-masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 900px) {
   .gallery-masonry {
     column-count: 4;
   }
