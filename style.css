@@ -1,4 +1,6 @@
-/* BASE STYLES */
+/* ========================= */
+/* =======BASE STYLES======= */
+/* ========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +9,7 @@
 
 body {
   color: #222;
-  font-family: Montserrat, sans-serif;
+  font-family: Roboto, sans-serif;
   line-height: 1.5;
 }
 
@@ -25,7 +27,14 @@ ul {
   width: 90%;
 }
 
-/* NAV */
+img {
+  width: 100%;
+}
+
+
+/* ================= */
+/* =======NAV======= */
+/* ================= */
 .menu-btn {
   color: #fff;
   cursor: pointer;
@@ -42,7 +51,6 @@ ul {
 
 .nav-wrapper {
   background-color: #222;
-  color: #fff; /*can be removed after uploading logo*/
   min-height: 75px;
   position: fixed;
   width: 100%;
@@ -63,8 +71,10 @@ ul {
 }
 
 .logo {
-  margin-top: .5rem;
+  height: 50px;
   margin-left: 1.5rem;
+  margin-top: -.25rem;
+  width: auto;
 }
 
 .main-menu {
@@ -93,12 +103,13 @@ ul {
 }
 
 .main-menu a:hover {
-  color: #eae0d5;
+  color: #c6ac8f;
 }
 
 
-
-/* HERO */
+/* ================== */
+/* =======HERO======= */
+/* ================== */
 .hero {
   align-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)), url(assets/images/hero-bg.jpg);
@@ -111,11 +122,14 @@ ul {
 
 .hero-logo {
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
   z-index: 2;
 }
 
-/* ABOUT */
+
+/* =================== */
+/* =======ABOUT======= */
+/* =================== */
 .about-me {
   padding: 6rem 0;
 }
@@ -123,6 +137,8 @@ ul {
 .about-me_content {
   align-items: center;
   display: grid;
+  font-size: 1.2rem;
+  font-weight: 300;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto-fill;
@@ -154,9 +170,13 @@ ul {
   text-transform: uppercase;
 }
 
-/* GALLERY */
+
+/* ===================== */
+/* =======GALLERY======= */
+/* ===================== */
 .gallery {
   background-color: #eae0d5;
+  background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
   padding: 3rem 0;
 }
 
@@ -178,23 +198,31 @@ ul {
 }
 
 .social-media_text {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 
 .gallery-masonry {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 20px;
-  grid-gap: 10px;
+  column-count: 2;
+  column-gap: 1em;
 }
 
-img {
+.item {
+  display: inline-block;
+  margin: 0 0 1em;
   width: 100%;
 }
 
-/* BLOG */
+.item:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* ================== */
+/* =======BLOG======= */
+/* ================== */
 .blog {
   padding: 3rem 0;
 }
@@ -202,10 +230,11 @@ img {
 .blog-content {
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(100px, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
   grid-gap: 2rem;
   justify-content: center;
+  justify-items: center;
+  margin: 3rem auto;
   text-align: center;
 }
 
@@ -214,9 +243,34 @@ img {
   text-align: center;
 }
 
-button {
-  height: 75px;
+.blog-content_text-main {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.btn {
+  align-self: center;
+  background-color: #c6ac8f;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color .3s ease-in-out;
+  padding: 1rem;
   width: 250px;
+}
+
+.btn::after {
+  display: inline-block;
+  padding-left: .5rem;
+  content: "\0279E";
+  transition: transform 0.3s ease-out;
+}
+
+.btn:hover {
+  background-color: #eae0d5;
+}
+
+.btn:hover::after {
+  transform: translateX(4px);
 }
 
 /* CONTACT */
@@ -249,13 +303,22 @@ button {
   padding: 1rem;
 }
 
+
+/* =========================== */
+/* =======MEDIA QUERIES======= */
+/* =========================== */
 @media (min-width: 760px) {
-  /* Universal Styles */
+  /* ========================= */
+  /* =======BASE STYLES======= */
+  /* ========================= */
   .container {
     max-width: 1100px;
   }
 
-  /* NAV */
+
+  /* ================= */
+  /* =======NAV======= */
+  /* ================= */ 
   .menu-btn {
     display: none;
   }
@@ -300,13 +363,27 @@ button {
     padding-right: 0;
   }
 
-  /* Social Media / Gallery */
+
+  /* ================== */
+  /* =======HERO======= */
+  /* ================== */ 
+  .hero-logo {
+    width: 75%;
+  }
+
+  /* ==================================== */
+  /* =======SOCIAL MEDIA / GALLERY======= */
+  /* ==================================== */
   .social-media {
     grid-auto-flow: column;
     justify-content: space-around;
   }
 
   .social-media_text {
-    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  .gallery-masonry {
+    column-count: 4;
   }
 }
