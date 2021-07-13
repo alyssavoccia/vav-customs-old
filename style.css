@@ -72,10 +72,10 @@ img {
 }
 
 .logo {
-  height: 50px;
+  /* height: 50px; */
   margin-left: 1.5rem;
   margin-top: -.25rem;
-  width: auto;
+  width: 75px;
 }
 
 .main-menu {
@@ -370,6 +370,7 @@ img {
   /* =======HERO======= */
   /* ================== */ 
   .hero-logo {
+    margin-top: 5rem;
     width: 75%;
   }
 
